@@ -37,6 +37,7 @@ class Pathfinder extends Component {
             row: row-5,
             col: col-5
         }
+        
         // console.log( endNode.row );
         const grid = getInitialGrid(row,col);
         grid[startNode.row][startNode.col].isStartNode = true;
@@ -139,6 +140,7 @@ class Pathfinder extends Component {
                 document.getElementById(`node-${i}-${j}`).className = "node";
             }
         }*/
+        /*this.state.startNode.className='node-start';*/
         this.visualizeDijkstra();
         /*for(let i = 0;i<this.state.row;i++){
             for(let j = 0; j<this.state.col;j++){
@@ -187,8 +189,13 @@ class Pathfinder extends Component {
                 const node = visitedNodesInOrder[i];
                 const newGrid = toggleVisit(this.state.grid,node.row,node.col);
                 //this.setState({grid:newGrid});
-                document.getElementById(`node-${node.row}-${node.col}`).className =
-                    'node node-visited';
+                if(document.getElementById(`node-${node.row}-${node.col}`)!=null){
+                    document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-visited';
+                }else{
+                    window.location.reload();
+                    window.location.pathname("/");
+                }
+
                 await sleep(10);
            // }, 10 * i);
         }
@@ -206,8 +213,14 @@ class Pathfinder extends Component {
                 if( i === nodesInShortestPathOrder.length-1 ){
                     this.setState({grid:newGrid});
                 }
-                document.getElementById(`node-${node.row}-${node.col}`).className =
+                if(document.getElementById(`node-${node.row}-${node.col}`)!=null){
+                    document.getElementById(`node-${node.row}-${node.col}`).className =
                     'node node-shortest-path';
+                }else{
+                    window.location.reload();
+                    window.location.pathname("/");
+                }
+                
                 await sleep(50);
             //}, 50 * i);
         }

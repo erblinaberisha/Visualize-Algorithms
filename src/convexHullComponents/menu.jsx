@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import DiscreteSlider from "./slider";
-import Instruct from '../instructions/Instruct';
-import instruct_gif from './convex_instruct.gif';
 class Menu extends Component {
     constructor(){
         super()
@@ -13,9 +11,6 @@ class Menu extends Component {
         return (
             <nav className="nav alert-dark">
                 <button className="btn btn-primary btn-lg m-2" onClick={this.props.onRefresh} disabled={this.props.isDisabled} style={this.isClickable()}>Refresh</button>
-                <button
-                    onClick={this.showModal}
-                    className='btn btn-danger btn-lg m-2'>Instructions</button>
                 <DiscreteSlider
                     onChange={this.props.onChangeSpeed}
                     title="speed"

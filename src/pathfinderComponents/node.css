@@ -7,17 +7,29 @@
 }
 
 .node-start{
-    background-color: chartreuse;
+    background: url("../homeComponents/images/go.png");
+    background-size: cover;
 }
 .node-end{
-    background-color: brown;
+    background: url("../homeComponents/images/finish.png");
+    background-size: cover;
 }
+
 .node-visited{
     animation-name: visitedAnimation;
     animation-iteration-count: 1;
     animation-duration: 1.5s;
     animation-delay: 0;
     background-color: rgba(0, 190, 218, 0.75);
+}
+
+.node-visited .node-start{
+    animation-name: visitedAnimation;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+    animation-delay: 0;
+    background-color: rgba(0, 190, 218, 0.75);
+    background: url("../homeComponents/images/go.png");
 }
 
 @keyframes visitedAnimation {
