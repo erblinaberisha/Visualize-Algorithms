@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import DiscreteSlider from "./slider";
 import SimpleSelect from "./simpleSelect";
-import CustomizedSlider from "./airBnbSlider";
-import RangeSlider from "./doubleSlider";
 import SwitchLabels from "./formControlLabel";
 
 
@@ -19,9 +17,6 @@ class Menu extends Component {
                     Randomize
                 </button>
 
-                <RangeSlider
-                    disable={this.props.disable}
-                />
                 <DiscreteSlider
                     default={20}
                     min={10}
@@ -53,7 +48,7 @@ class Menu extends Component {
                     onAlgoChanged={this.props.onAlgoChanged}
                 />
                 <button
-                    className='btn btn-warning btn-lg '
+                    className='btn btn-warning btn-lg m-2'
                     onClick={this.props.onViusalize}
                     disabled={this.props.disable}
                     style={this.isClickable()}

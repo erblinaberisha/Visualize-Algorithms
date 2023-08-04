@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Anurati;
+    src: url(./images/Anurati-Regular.otf);
+}
+
+@font-face {
+    font-family: ASAP SEMIBOLD;
+    src: url(./images/Asap-SemiBold.ttf);
+}
 
 .type{
     width: 100%;
@@ -27,4 +36,79 @@
     /*background-color: white;*/
     color: white;
     padding: 10px;
+}
+
+.algo-name {
+    font-size: 18px;
+    font-weight: 700;
+    color:white;
+}
+
+.algo-image{
+    height: 175px;
+    width: auto;
+    object-fit:cover;
+    fill: white;
+    background-color: transparent;
+}
+
+.logo{
+    /* left: 50%;                         
+    transform: translate( -50%,0); */
+    position: relative;
+    z-index: 100;
+    float:top;
+}
+.links li{
+    cursor: pointer;
+    margin: 10px;
+    fill: white!important;
+    margin-top: 25px;
+    /* display: inline; */
+}
+.links li svg{
+    height: 20px;
+    width: auto;
+}
+.links{
+    position: sticky;
+    z-index: 100;
+    display: flex;
+    list-style: none;
+    vertical-align: top;
+    float: left;
+    cursor: pointer;
+    /* position: absolute; */
+    /* display: flex;
+   flex-direction: row; */
+   /* Below sets up your display method: flex-start|flex-end|space-between|space-around */
+   justify-content: flex-start; 
+   /* Below removes bullets and cleans white-space */
+   list-style: none;
+   padding: 0;
+   /* Bonus: forces no word-wrap */
+   white-space: nowrap;
+}
+.main-title{
+    font-size: 3rem;
+    color: white;
+    padding-top: 18vh;
+    font-family: Anurati, sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.main-title svg{
+    fill: white;
+    margin-bottom: 30px;
+    height: 80px;
+    width: auto;
+    text-align: center;
+}
+.description-title{
+    color: white;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-family: ASAP SEMIBOLD;
 }

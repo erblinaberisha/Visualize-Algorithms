@@ -42,7 +42,7 @@ class Menu extends Component {
                 >Reset</button>
 
                 <button
-                    className='btn btn-warning btn-lg '
+                    className='btn btn-warning btn-lg m-2'
                     onClick={this.props.onStart}
                     disabled={this.props.disable}
                 >Visualize</button>

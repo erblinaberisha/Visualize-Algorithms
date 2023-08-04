@@ -20,7 +20,7 @@ class Menu extends Component {
                 </button>
                 <button
                     onClick={this.props.onVisualize}
-                    className="btn btn-warning btn-lg"
+                    className="btn btn-warning btn-lg m-2"
                 >Visualize</button>
                 <button
                     onClick={this.props.onClearPath}

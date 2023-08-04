@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import Navbar from "./navbar";
-import Greet from "./greet";
 import Cards from "./cards";
 import Footer from "./footer";
-import "./style.css"
+import "./style.css";
+import {ReactComponent as Github} from "./images/github.svg";
+import {ReactComponent as LinkedIn} from "./images/linkedin.svg";
+import {ReactComponent as LogoIcon} from "./images/analytics.svg";
 
 class Home extends Component {
     componentDidMount(){
@@ -63,7 +64,7 @@ class Home extends Component {
             },
             "move": {
               "enable": true,
-              "speed": 9,
+              "speed": 3,
               "direction": "none",
               "random": false,
               "straight": false,
@@ -130,8 +131,37 @@ class Home extends Component {
             <React.Fragment>
                 <div className="back">
                     <div id="particles-js"></div>
-                    <Navbar/>
-                    <Greet/>
+                    <div class="box title">
+                    <div className="container-fluid solid" style={{textAlign: 'center'}}>
+                        <ul className="links">
+                            <li onClick={()=>window.open("https://github.com/erblinaberisha/Visualize-Algorithms/tree/main","_blank")}>
+                                <i>
+                                    <Github/>
+                                </i>
+                            </li>
+                            <li onClick={()=>window.open("https://www.linkedin.com/in/erëblina-berisha-b6a109175/","_blank")}>
+                                <i>
+                                    <LinkedIn/>
+                                </i>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                    
+                <h1 className="main-title center">
+                            <div className="logo">
+                            <LogoIcon/>
+                            </div>
+                            ALGORITHM <strong style={{color:"#4175c4"}}><br></br>VISUALIZER</strong>
+                </h1>
+                <div>
+                    <p className="description-title center">
+                    Algorithm Visualizer is an interactive online platform that visualizes algorithms from code.
+                    Currently these include Sorting, Pathfind and ConvexHull Algorithms.
+                    More Algorithms will be coming soon!!
+                    </p>
+                </div>
                     <Cards/>
                     <Footer/>
                 </div>

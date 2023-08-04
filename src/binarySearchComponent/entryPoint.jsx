@@ -16,6 +16,7 @@ class EntryPoint extends Component {
                     type="number"
                     variant="outlined"
                     onChange={this.getData}
+                    placeholder='100'
                 /> <br /><br />
                 <h1>
                     Guess a number between 0 and {this.props.upper}

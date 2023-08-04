@@ -9,28 +9,10 @@ class Menu extends Component {
             showModal:true
         }
     }
-    showModal = () => {
-        this.setState({ 
-                showModal: true
-            });
-      };
-
-      hideModal = () => {
-        this.setState({ showModal: false });
-        };
     render() {
         return (
-            <div style={{height:"100vh",alignItems:"center"}}>
-            <Instruct show={this.state.showModal}>
-                    <h3>How to use?</h3>
-                <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
-                </Instruct>
             <nav className="nav alert-dark">
                 <button className="btn btn-primary btn-lg m-2" onClick={this.props.onRefresh} disabled={this.props.isDisabled} style={this.isClickable()}>Refresh</button>
-                <li className="nav-item">
-                        <a className="nav-link" href="#" onClick={this.showModal}>Instructions <span className="sr-only" >(current)</span></a>
-                </li>
                 <button
                     onClick={this.showModal}
                     className='btn btn-danger btn-lg m-2'>Instructions</button>
@@ -64,7 +46,6 @@ class Menu extends Component {
                 </button>
 
             </nav>
-            </div>
         );
     }
     isClickable = () =>{

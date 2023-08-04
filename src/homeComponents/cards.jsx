@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ImgMediaCard from "./card";
 import ImgMediaCard2 from "./card2";
 import "./style.css";
 import {getDetails} from "./cardDetails";
@@ -28,7 +27,7 @@ class Cards extends Component {
                        onChange={this.getData}
                    />
                </div>
-               <div className="d-flex flex-wrap justify-content-center Cards p-lg-5">
+               <div className="d-flex flex-wrap justify-content-center Cards">
                    {
                        this.state.cards.filter((card) => card.title.toLowerCase().includes(this.state.filter.toLowerCase())||card.description.toLowerCase().includes(this.state.filter.toLowerCase())).map(card=>(
                            <div>

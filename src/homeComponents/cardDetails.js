@@ -1,6 +1,7 @@
 import graph from "./images/graphh.png";
 import primes from "./images/primess.png";
 import sort from "./images/sortt.png";
+import sort1 from "./images/sort1.png";
 import binSearch from "./images/binary.png";
 import convex from './images/hulll.png';
 export function getDetails(){
@@ -24,7 +25,7 @@ export function getDetails(){
            title:"Recursive Sorting",
            description:"Compare different recursive sorting algorithms",
            route:"/recursivesort",
-           img:sort
+           img:sort1
        },
        {
            id:4,
