@@ -8,7 +8,6 @@ import Sort from "./sortComponents/sort";
 import ConvexHull from "./convexHullComponents/convexHull";
 import BinarySearch from "./binarySearchComponent/binarySearch";
 import RecursiveSort from "./recursiveSortComponents/recursiveSort";
-import Graph from "./Graph/graph";
 
 class App extends Component {
 
@@ -29,7 +28,6 @@ class App extends Component {
                     <Route path='/convexhull' component={ConvexHull}/>
                     <Route path='/binarysearch' component={BinarySearch}/>
                     <Route path='/recursivesort' component={RecursiveSort}/>
-                    <Route path='/graph' component={Graph}/>
                     <Route path='/' component={Home}/>
 
                 </Switch>

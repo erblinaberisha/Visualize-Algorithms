@@ -23,15 +23,6 @@
     background-color: rgba(0, 190, 218, 0.75);
 }
 
-.node-visited .node-start{
-    animation-name: visitedAnimation;
-    animation-iteration-count: 1;
-    animation-duration: 1.5s;
-    animation-delay: 0;
-    background-color: rgba(0, 190, 218, 0.75);
-    background: url("../homeComponents/images/go.png");
-}
-
 @keyframes visitedAnimation {
     0% {
         transform: scale(0.3);
@@ -58,7 +49,7 @@
     background-color: black;
     outline: 1px solid black;
     animation-name: wallAnimation;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;
@@ -69,12 +60,12 @@
 @keyframes wallAnimation {
     0% {
         transform: scale(.3);
-        background-color: rgb(12, 53, 71);
+        background-color: rgb(23, 84, 110);
     }
 
     50% {
         transform: scale(1.2);
-        background-color: rgb(12, 53, 71);
+        background-color: rgb(21, 74, 97);
     }
 
     100% {
@@ -84,29 +75,27 @@
 }
 
 .node-shortest-path {
+    background-color: greenyellow;
     animation-name: shortestPath;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: none;
     animation-play-state: running;
 }
 
 @keyframes shortestPath {
-    0% {
-        transform: scale(0.6);
-        background-color: rgb(255, 254, 106);
-    }
-
-    50% {
-        transform: scale(1.2);
-        background-color: rgb(255, 254, 106);
-    }
-
-    100% {
-        transform: scale(1);
-        background-color: rgb(255, 254, 106);
-    }
+        0% {
+          transform: scale(0.3);
+          background-color: red;
+          border-radius: 100%;
+      }
+      50% {
+          background-color: orange;
+      }
+      100% {
+          transform: scale(1);
+          background-color: yellow;
+      }
 }

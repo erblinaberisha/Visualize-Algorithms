@@ -43,7 +43,7 @@ class RecursiveSort extends Component {
                     onAlgoChanged={this.handleAlgoChanged}
                     onSpeedChange={this.handleSpeedChanged}
                 />
-                <div className=' justify-content-center'>
+                <div className=' justify-content-center mt-5'>
                     <Rects
                         rects={this.state.rects}
                     />
@@ -71,7 +71,6 @@ class RecursiveSort extends Component {
     }
     handleAlgoChanged = (pos, val) => {
         if (pos === 0) {
-            // console.log("sup 0");
             this.setState({algo: val});
         }
     }

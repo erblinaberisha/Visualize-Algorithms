@@ -5,15 +5,15 @@ import SimpleSelect from "./simpleSelect";
 class Menu extends Component {
     render() {
         return (
-            <nav className="nav alert-dark">
-                <button className="btn btn-primary btn-lg m-2" onClick={this.props.onRefresh} disabled={this.props.isDisabled} style={this.isClickable()}>Refresh</button>
+            <nav className="nav alert-light pl-2 pt-2 mb-2">
+                <button className="btn btn-success btn-lg m-2" onClick={this.props.onRefresh} disabled={this.props.isDisabled} style={this.isClickable()}>Refresh</button>
                 <SimpleSelect
                     pos={0}
                     onAlgoChanged={this.props.setAlgo}
                 />
                 <DiscreteSlider
                     onChange={this.props.onChangeSpeed}
-                    title="speed"
+                    title="Speed"
                     marks={false}
                     default={10}
                     step={1}
@@ -31,7 +31,7 @@ class Menu extends Component {
                     max={500}
                     isDisabled={this.props.isDisabled}
                 />
-                <button className="btn btn-warning btn-lg m-2" onClick={this.props.onVisualize} disabled={this.props.isDisabled} style={this.isClickable()}>Visualize</button>
+                <button className="btn btn-primary btn-lg m-2" onClick={this.props.onVisualize} disabled={this.props.isDisabled} style={this.isClickable()}>Visualize</button>
 
 
             </nav>

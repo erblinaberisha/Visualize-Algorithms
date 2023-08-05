@@ -36,16 +36,15 @@ class Canvas extends Component {
     render() {
         return (
             <div style={{textAlign:"center"}}>
-                <div className="containerz">
+                <div>
                     <canvas
                         className='canvas'
                         id='canvas1'
-                        style={{backgroundColor:"whitesmoke"}}
+                        style={{backgroundColor:"white"}}
                         ref={this.canvasLineRef} width={window.innerWidth} height={window.innerHeight-200} />
                     <canvas
                         className='canvas'
                         id='canvas2'
-                        // style={{backgroundColor:"grey"}}
                         ref={this.myRef} width={window.innerWidth} height={window.innerHeight-200}
                     />
 

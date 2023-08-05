@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 class Navbar extends Component {
@@ -13,11 +13,7 @@ class Navbar extends Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent" >
-                    <Link to={"/"}>
-                        <span style={{color:"white"}}>
-                            Home
-                        </span>
-                    </Link>
+                    <NavLink exact to="/" className="nav-link" style={{color:"white"}}>Home</NavLink>
                 </div>
 
             </nav>

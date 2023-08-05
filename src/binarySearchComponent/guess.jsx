@@ -5,10 +5,8 @@ class Guess extends Component {
     render() {
         return (
             <div >
-
                 <p>
-
-                    <button className="btn btn-secondary btn-lg" type="button" data-toggle="collapse"
+                    <button className="btn btn-primary btn-lg" type="button" data-toggle="collapse"
                             data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         Toggle Range
                     </button>

@@ -6,7 +6,9 @@ class Result extends Component {
             <div>
                 <span className='display-3'>
                     Your number is {this.props.res}
-                </span> <br />
+                </span> 
+                <br />
+                <br />
                 <button
                     className='btn btn-warning btn-lg'
                     onClick={this.props.onRestart}

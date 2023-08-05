@@ -7,9 +7,9 @@ import SwitchLabels from "./formControlLabel";
 class Menu extends Component {
     render() {
         return (
-            <nav className="nav alert-dark">
+            <nav className="nav alert-light pl-2 pt-2 mb-2">
                 <button
-                    className='btn btn-secondary m-2'
+                    className='btn btn-success m-2'
                     onClick={this.props.onRandomize}
                     disabled={this.props.disable}
                     style={this.isClickable()}
@@ -48,7 +48,7 @@ class Menu extends Component {
                     onAlgoChanged={this.props.onAlgoChanged}
                 />
                 <button
-                    className='btn btn-warning btn-lg m-2'
+                    className='btn btn-primary btn-lg m-2'
                     onClick={this.props.onViusalize}
                     disabled={this.props.disable}
                     style={this.isClickable()}

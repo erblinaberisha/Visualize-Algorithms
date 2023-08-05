@@ -23,7 +23,7 @@ class Rect extends Component {
         } else if( this.props.rect.isSorting ){
             return "red";
         } else{
-            return "black"
+            return "dodgerblue"
         }
     }
 }

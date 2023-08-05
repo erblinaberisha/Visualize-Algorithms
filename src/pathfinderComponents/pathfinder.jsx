@@ -15,7 +15,7 @@ class Pathfinder extends Component {
             grid:[],
             mouseIsPressed:false,
             algorithms:[
-                "Dijsktra","A star","BFS","DFS"
+                "Dijkstra","A star","BFS","DFS"
             ],
             algo:0,
             mazes:[
@@ -135,22 +135,7 @@ class Pathfinder extends Component {
         this.setState({grid:clearPath(grid,row,col)});
     }
     handleClick = () =>{
-      /*  for(let i = 0;i<20;i++){
-            for(let j = 0; j<50;j++){
-                document.getElementById(`node-${i}-${j}`).className = "node";
-            }
-        }*/
-        /*this.state.startNode.className='node-start';*/
         this.visualizeDijkstra();
-        /*for(let i = 0;i<this.state.row;i++){
-            for(let j = 0; j<this.state.col;j++){
-                setTimeout(()=>{
-                    const newGrid = toggleVisit(this.state.grid,i,j);
-                    this.setState({grid:newGrid});
-                    //document.getElementById(`node-${i}-${j}`).className = "node node-visited";
-                },100*(i+j)+j);
-            }
-        }*/
     }
 
     visualizeDijkstra() {
@@ -178,26 +163,23 @@ class Pathfinder extends Component {
         for (let i = 0; i <= visitedNodesInOrder.length; i++) {
 
             if (i === visitedNodesInOrder.length) {
-              //  setTimeout(() => {
                     await sleep(100);
                     await this.animateShortestPath(nodesInShortestPathOrder);
-
-              //  }, 10 * (i+10));
                 return;
             }
-           // setTimeout(() => {
                 const node = visitedNodesInOrder[i];
                 const newGrid = toggleVisit(this.state.grid,node.row,node.col);
-                //this.setState({grid:newGrid});
                 if(document.getElementById(`node-${node.row}-${node.col}`)!=null){
+
                     document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-visited';
+                    
+                    document.getElementById(`node-${4}-${4}`).className = 'node node-start';
+                    document.getElementById(`node-${14}-${47}`).className = 'node node-end';
                 }else{
                     window.location.reload();
                     window.location.pathname("/");
                 }
-
                 await sleep(10);
-           // }, 10 * i);
         }
     }
 
@@ -205,7 +187,6 @@ class Pathfinder extends Component {
         const grid = this.state.grid;
         const newGrid = grid.slice();
         for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
-         //   setTimeout(() => {
 
                 const node = nodesInShortestPathOrder[i];
                 const newNode = {...newGrid[node.row][node.col],ispathNode:true};
@@ -214,15 +195,18 @@ class Pathfinder extends Component {
                     this.setState({grid:newGrid});
                 }
                 if(document.getElementById(`node-${node.row}-${node.col}`)!=null){
+
                     document.getElementById(`node-${node.row}-${node.col}`).className =
                     'node node-shortest-path';
+
+                    document.getElementById(`node-${4}-${4}`).className = 'node node-start';
+                    document.getElementById(`node-${14}-${47}`).className = 'node node-end';
                 }else{
                     window.location.reload();
                     window.location.pathname("/");
                 }
                 
                 await sleep(50);
-            //}, 50 * i);
         }
     }
 

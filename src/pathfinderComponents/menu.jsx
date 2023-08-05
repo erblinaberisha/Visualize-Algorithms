@@ -4,7 +4,7 @@ import SimpleSelect from "./simpleSelect";
 class Menu extends Component {
     render() {
         return (
-            <nav className="nav alert-dark" >
+            <nav className="nav alert-light pl-2 pt-2">
                 <SimpleSelect
                     onAlgoChanged = {this.props.onAlgoChanged}
                     items={this.props.algorithms}
@@ -14,20 +14,20 @@ class Menu extends Component {
                     items={this.props.mazes}
                 />
                 <button
-                    className='btn btn-lg btn-secondary m-2'
+                    className='btn btn-lg btn-success m-2'
                     onClick={this.props.onCreateMaze}>
                     Create Maze
                 </button>
                 <button
                     onClick={this.props.onVisualize}
-                    className="btn btn-warning btn-lg m-2"
+                    className="btn btn-primary btn-lg m-2"
                 >Visualize</button>
                 <button
                     onClick={this.props.onClearPath}
-                    className='btn btn-danger btn-lg m-2'>Clear Path</button>
+                    className='btn btn-outline-danger btn-lg m-2'>Clear Path</button>
                 <button
                     onClick={this.props.onClearBoard}
-                    className='btn btn-danger btn-lg m-2'>Clear Board</button>
+                    className='btn btn-outline-danger btn-lg m-2'>Clear Board</button>
             </nav>
         );
     }

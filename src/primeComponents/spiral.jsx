@@ -23,7 +23,7 @@ class Spiral extends Component {
         // console.log(width,height);
         let radius = (Math.min(width,height))/300;
         return (
-            <div className={'bg-dark'}>
+            <div>
                 {/*sdfsdfsdfsdfsdfsdf*/}
                 <svg viewBox={"0 0 "+2*width+" "+2*height} xmlns="http://www.w3.org/2000/svg">
                     {this.props.primes.map( (cell,cellidx)=>{
@@ -33,7 +33,7 @@ class Spiral extends Component {
                                 cx={cell*Math.cos(cell)+width}
                                 cy={cell*Math.sin(cell)+height}
                                 r={radius}
-                                stroke="black" stroke-width="0.5" fill='#51c4b5'
+                                stroke="black" stroke-width="0.5" fill='dodgerblue'
 
                             />
                         );

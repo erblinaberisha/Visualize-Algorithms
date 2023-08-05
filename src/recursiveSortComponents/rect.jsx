@@ -28,7 +28,7 @@ class Rect extends Component {
         } else if(this.props.rect.isRight){
             return "purple";
         }else{
-            return "#ADD8E6";
+            return "dodgerblue";
         }
     }
     checkBorder = () =>{

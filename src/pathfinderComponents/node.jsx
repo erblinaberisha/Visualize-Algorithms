@@ -28,7 +28,7 @@ class Node extends Component {
             return 'node node-shortest-path';
         }else if( this.props.node.isVisited === true ){
             return "node  node-visited";
-        } else{
+        }else{
             return "node";
         }
     }
