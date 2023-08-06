@@ -1,6 +1,30 @@
 .App {
   text-align: center;
 }
+#guess{
+  height: 655px;
+  background: url("../src/binarySearchComponent/guess.webp");
+  background-size: auto;
+}
+
+#num{
+  margin-top: 50px;
+  text-align: center;
+  margin-right: 230px;
+  margin-left: 230px;
+  background-color: white;
+  padding: 20px;
+  border: 5px solid rgb(155, 172, 248);
+  border-radius: 25px;
+}
+
+#slide{
+  padding-top: 40px;
+}
+
+#range-slider{
+  font-size: 20px;
+}
 
 .App-logo {
   height: 40vmin;

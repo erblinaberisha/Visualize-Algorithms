@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
+import "../App.css";
 
 const useStyles = makeStyles({
     root: {
@@ -16,6 +17,7 @@ const CSlider = withStyles({
         height: 3,
         width: 400,
         padding: "13px 0",
+
     },
     track: {
         height: 4,
@@ -49,7 +51,7 @@ export default function RangeSlider(props) {
     },[props.lower,props.upper])
     return (
         <div className={classes.root}>
-            <CSlider
+            <CSlider id="slide"
                 disabled
                 value={value}
                 onChange={handleChange}
@@ -61,7 +63,7 @@ export default function RangeSlider(props) {
                 max={props.max}
             />
             <Typography id="range-slider" gutterBottom>
-                Binary Search
+                <span class="badge badge-warning">Binary Search</span>
             </Typography>
         </div>
     );

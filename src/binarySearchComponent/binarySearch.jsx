@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import EntryPoint from "./entryPoint";
 import Search from "./search";
 import Navbar from "./navbar";
+import "../App.css";
 
 class BinarySearch extends Component {
     state={
@@ -12,12 +13,12 @@ class BinarySearch extends Component {
     }
     render() {
         return (
-            <div>
+            <div id="guess">
                 <Navbar/>
                 <br />
                 <br />
                 <br />
-            <center>
+            <div id="num">
                 {!this.state.isRunning &&
                 <EntryPoint
                     startGame={this.handleStartGame}
@@ -34,7 +35,7 @@ class BinarySearch extends Component {
                     onRestart={this.handleRestart}
                 />
                 }
-            </center>
+            </div>
             </div>
         );
     }
