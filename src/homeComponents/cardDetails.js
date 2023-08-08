@@ -8,14 +8,14 @@ export function getDetails(){
    return [
        {
            id:1,
-           title:"Pathfinder",
+           title:"Pathfinding",
            description:"Visualize graph algorithms like dijkstra, BFS, DFS",
            route:"/pathfinder",
            img:graph
        },
        {
            id:2,
-           title:"Sorting Algorithm",
+           title:"Sorting Algorithms",
            description:"Compare different sorting algorithms",
            route:"/sort",
            img:sort
