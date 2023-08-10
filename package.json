@@ -27,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
     "react-spring": "^8.0.27",
+    "react-text-loop": "^2.3.0",
     "sweetalert2": "^11.6.13",
     "typewriter-effect": "^2.13.1",
     "web-vitals": "^0.2.4"

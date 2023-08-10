@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import SimpleSelect from "./simpleSelect";
-import MyComponent from '../MyComponent';
 import Instruct from "../instructions/Instruct";
-import instruct_gif from "../convexHullComponents/convex_instruct.gif";
+import instruct_gif from "../AlgorithmDescription/pathfinder.gif";
+import MyComponent from '../AlgorithmDescription/Pathfinder';
 class Menu extends Component {
     constructor(){
         super()
@@ -25,7 +25,7 @@ class Menu extends Component {
                 <Instruct show={this.state.showModal}>
                     <h3>How to use?</h3>
                 <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
+                    <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
                 </Instruct>
                 <nav className="nav alert-light pl-2 pt-2">
                     <SimpleSelect
@@ -52,7 +52,7 @@ class Menu extends Component {
                         onClick={this.props.onClearBoard}
                         className='btn btn-outline-danger btn-lg m-2'>Clear Board</button>
                         <button
-                        className="btn btn-primary btn-lg m-2"
+                        className="btn btn-outline-secondary btn-md m-2 mt-3"
                         onClick={this.showModal}
                         disabled={this.props.isDisabled}
                     >

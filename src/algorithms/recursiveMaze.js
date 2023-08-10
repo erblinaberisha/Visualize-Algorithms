@@ -43,7 +43,7 @@ function decideMaze(pairs,board,startRow,endRow,startCol,endCol) {
         return;
     }
 
-     if( (endCol - startCol) > (endRow - startRow) ){
+    if( (endCol - startCol) > (endRow - startRow) ){
         recursiveMazeVertical(pairs,board,startRow,endRow,startCol,endCol);
     } else{
         recursiveMazeHorizontal(pairs,board,startRow,endRow,startCol,endCol);

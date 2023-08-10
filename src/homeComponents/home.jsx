@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Cards from "./cards";
+import TextLoop from "react-text-loop";
 import Footer from "./footer";
 import "./style.css";
 import {ReactComponent as Github} from "./images/github.svg";
@@ -150,16 +151,27 @@ class Home extends Component {
                 </div>
                     
                 <h1 className="main-title center">
-                            <div className="logo">
-                            <LogoIcon/>
-                            </div>
-                            ALGORITHM <strong style={{color:"#4175c4"}}><br></br>VISUALIZER</strong>
+                  <div className="logo">
+                  <LogoIcon/>
+                  </div>
+                  ALGORITHM <strong style={{color:"#4175c4"}}><br></br>VISUALIZER</strong>
                 </h1>
+                <div className='welcome'>
+                  <p className="quote">
+                    <TextLoop interval={3800} springConfig={{ stiffness: 200 }} adjustingSpeed={300} >
+                        <p className="quoteText">"An algorithm must be seen to be believed."</p>
+                        <p className="quoteText">"Algorithms are central objects of study in Computer Science."</p>
+                        <p className="quoteText">"Algorithms are apprehensible magics."</p>
+                        <p className="quoteText">"An algorithm is like a recipe."</p>
+                    </TextLoop>
+                  </p>
+                </div>
                 <div>
                     <p className="description-title center">
                     Algorithm Visualizer is an interactive online platform that visualizes algorithms from code.
                     Currently these include Sorting, Pathfind and ConvexHull Algorithms.
                     More Algorithms will be coming soon!!
+                    This website might help you understand algorithms better by visualizing them.
                     </p>
                 </div>
                     <Cards/>
