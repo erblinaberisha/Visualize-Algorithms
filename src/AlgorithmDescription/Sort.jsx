@@ -13,7 +13,7 @@ function MyComponent() {
     };
         return (
             <div>
-                <button className="btn btn-primary btn-lg m-2" onClick={showModal}>Description</button>
+                <button className="btn btn-warning mr-2 mt-2 mb-2 desc" onClick={showModal}>Description</button>
 
                 {modalOpen && (
                     <div className="modal display-block">
@@ -36,7 +36,7 @@ function MyComponent() {
                               </p>
                               <p>Now please choose a sorting algorithm and visualize it! You can click the Duo switch to compare two different sorting algorithms.</p>
                                 <p class='tips'>(after choosing an algorithm, click on the Visualize button.)</p><br />
-                                <p class='tips'>Note: if you want to get a different array to sort you can do so by clicking the Randomize button.</p>
+                                <p class='tips'>Note: if you want to get a different array to sort you can do so by clicking the Random button.</p>
                             </div>
                             <div class="modal-footer">
                               <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={hideModal}>OK</button>

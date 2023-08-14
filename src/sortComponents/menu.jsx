@@ -3,7 +3,7 @@ import DiscreteSlider from "./slider";
 import SimpleSelect from "./simpleSelect";
 import SwitchLabels from "./formControlLabel";
 import Instruct from "../instructions/Instruct";
-import instruct_gif from "../convexHullComponents/convex_instruct.gif";
+import instruct_gif from "../sortComponents/instruct.gif";
 import MyComponent from '../AlgorithmDescription/Sort';
 
 class Menu extends Component {
@@ -25,11 +25,13 @@ class Menu extends Component {
     render() {
         return (
             <React.Fragment>
-                <Instruct show={this.state.showModal}>
-                    <h3>How to use?</h3>
-                <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
-                </Instruct>
+                <div className='text-center'>
+                    <Instruct show={this.state.showModal}>
+                        <h3>How to use?</h3>
+                        <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
+                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
+                    </Instruct>
+                </div>
                 <nav className="nav alert-light pl-2 pt-2 mb-2">
                     <button
                         className='btn btn-success m-2'
@@ -37,7 +39,7 @@ class Menu extends Component {
                         disabled={this.props.disable}
                         style={this.isClickable()}
                     >
-                        Randomize
+                        Random
                     </button>
 
                     <DiscreteSlider
@@ -79,9 +81,9 @@ class Menu extends Component {
                         Visualize
                     </button>
                     <button
-                        className="btn btn-primary btn-lg m-2"
+                        className="btn btn-warning m-2"
                         onClick={this.showModal}
-                        disabled={this.props.isDisabled}
+                        disabled={this.props.disable}
                     >
                         Instructions
                     </button>

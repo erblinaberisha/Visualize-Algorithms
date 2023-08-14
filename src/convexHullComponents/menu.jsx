@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import DiscreteSlider from "./slider";
 import Instruct from "../instructions/Instruct";
-import instruct_gif from "./convex_instruct.gif";
+import instruct_gif from "../convexHullComponents/instruct.gif";
 import MyComponent from '../AlgorithmDescription/ConvexHull';
 class Menu extends Component {
     constructor(){
@@ -22,11 +22,13 @@ class Menu extends Component {
     render() {
         return (
             <React.Fragment>
-                <Instruct show={this.state.showModal}>
-                    <h3>How to use?</h3>
-                <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
-                    <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
-                </Instruct>
+                <div className='text-center'>
+                    <Instruct show={this.state.showModal}>
+                        <h3>How to use?</h3>
+                        <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
+                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
+                    </Instruct>
+                </div>
                 <nav className="nav alert-light pl-2 pt-2 mb-2">
                     <button className="btn btn-success btn-lg m-2" onClick={this.props.onRefresh} disabled={this.props.isDisabled} style={this.isClickable()}>Refresh</button>
                     <DiscreteSlider
@@ -58,7 +60,7 @@ class Menu extends Component {
                         Visualize Graham Scan
                     </button>
                     <button
-                        className="btn btn-outline-secondary btn-md m-2 mt-3"
+                        className="btn btn-warning m-2"
                         onClick={this.showModal}
                         disabled={this.props.isDisabled}
                         style={this.isClickable()}

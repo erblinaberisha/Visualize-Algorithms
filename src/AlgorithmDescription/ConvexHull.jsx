@@ -12,7 +12,7 @@ function MyComponent() {
     };
         return (
             <div>
-                <button className="btn btn-outline-secondary btn-md m-2 mt-3" onClick={showModal}>Description</button>
+                <button className="btn btn-warning m-2 desc" onClick={showModal}>Description</button>
 
                 {modalOpen && (
                     <div className="modal display-block">

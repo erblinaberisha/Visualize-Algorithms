@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import SimpleSelect from "./simpleSelect";
+import SimpleSelectMaze from "./simpleSelectMaze";
 import Instruct from "../instructions/Instruct";
-import instruct_gif from "../AlgorithmDescription/pathfinder.gif";
+import instruct_gif from "../pathfinderComponents/instruct.gif";
 import MyComponent from '../AlgorithmDescription/Pathfinder';
 class Menu extends Component {
     constructor(){
@@ -22,17 +23,19 @@ class Menu extends Component {
     render() {
         return (
             <React.Fragment>
-                <Instruct show={this.state.showModal}>
-                    <h3>How to use?</h3>
-                <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
-                    <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
-                </Instruct>
+                <div className='text-center'>
+                    <Instruct show={this.state.showModal}>
+                        <h3>How to use?</h3>
+                        <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
+                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
+                    </Instruct>
+                </div>
                 <nav className="nav alert-light pl-2 pt-2">
                     <SimpleSelect
                         onAlgoChanged = {this.props.onAlgoChanged}
                         items={this.props.algorithms}
                     />
-                    <SimpleSelect
+                    <SimpleSelectMaze
                         onAlgoChanged={this.props.onMazeChanged}
                         items={this.props.mazes}
                     />
@@ -52,7 +55,7 @@ class Menu extends Component {
                         onClick={this.props.onClearBoard}
                         className='btn btn-outline-danger btn-lg m-2'>Clear Board</button>
                         <button
-                        className="btn btn-outline-secondary btn-md m-2 mt-3"
+                        className="btn btn-warning m-2"
                         onClick={this.showModal}
                         disabled={this.props.isDisabled}
                     >

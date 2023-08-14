@@ -30,3 +30,7 @@ code {
   background-image: url("../src/homeComponents/images/finish.png");
   background-size: 25px, 25px;
 }
+
+.desc{
+  height: 50px;
+}

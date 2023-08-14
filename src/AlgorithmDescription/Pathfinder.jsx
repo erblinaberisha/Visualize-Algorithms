@@ -12,13 +12,13 @@ function MyComponent() {
     };
         return (
             <div>
-                <button className="btn btn-outline-secondary btn-md m-2 mt-3" onClick={showModal}>Description</button>
+                <button className="btn btn-warning m-2 desc" onClick={showModal}>Description</button>
 
                 {modalOpen && (
                     <div className="modal display-block">
                           <div class="modal-main1 intro">
                             <div class="modal-header">
-                                  <h5 class="modal-title">Pathfinding</h5>
+                                  <h5 class="modal-title">Pathfinder</h5>
                                   <button type="button" class="close" onClick={hideModal}>&times;</button>
                               </div>
                             <div class="modal-body intro">
@@ -33,9 +33,9 @@ function MyComponent() {
                                     <div class="fimg" width="20" height="20"></div>
                                     .
                               </p>
-                              <p>You may click on the blank nodes to add random Walls. Or this can be made automatically using Create Maze button.</p>
-                              <p>Now please choose a sorting algorithm and visualize it!</p>
-                                <p class='tips'>(after choosing an algorithm, click on the Visualize button.)</p><br />
+                              <p>You may click on the blank nodes to add random Walls. Or this can be made automatically by choosing a Maze Algorithm and then clicking Create Maze button.</p>
+                              <p>Now please choose a Path Algorithm and visualize it!</p>
+                                <p class='tips'>(after choosing a Path Algorithm, click on the Visualize button.)</p><br />
                                 <p class='tips'>Note: if you want to remove Walls and generated Path you can do so by clicking in Clear Path and Clear Board buttons.</p>
                             </div>
                             <div class="modal-footer">

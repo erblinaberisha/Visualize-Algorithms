@@ -28,7 +28,7 @@ const SimpleSelect = (props) => {
     return (
         <div>
             <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label">Algorithm</InputLabel>
+                <InputLabel id="demo-simple-select-label">Path Algorithm</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
