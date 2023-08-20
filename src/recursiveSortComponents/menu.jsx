@@ -74,7 +74,6 @@ class Menu extends Component {
                     <button
                         className="btn btn-warning m-2"
                         onClick={this.showModal}
-                        disabled={this.props.disable}
                     >
                         Instructions
                     </button>
