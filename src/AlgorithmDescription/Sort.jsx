@@ -13,7 +13,9 @@ function MyComponent() {
     };
         return (
             <div>
-                <button className="btn btn-warning mr-2 mt-2 mb-2 desc" onClick={showModal}>Description</button>
+                <button className="btn btn-warning mr-2 mt-2 mb-2 desc" onClick={showModal}>
+                    Description
+                </button>
 
                 {modalOpen && (
                     <div className="modal display-block">

@@ -40,24 +40,31 @@ class Menu extends Component {
                         items={this.props.mazes}
                     />
                     <button
+                        disabled={this.props.disable}
+                        style={this.isClickable()}
                         className='btn btn-lg btn-success m-2'
                         onClick={this.props.onCreateMaze}>
                         Create Maze
                     </button>
                     <button
-                        onClick={this.props.onVisualize}
                         className="btn btn-primary btn-lg m-2"
+                        onClick={this.props.onVisualize}
+                        disabled={this.props.disable}
+                        style={this.isClickable()}
                     >Visualize</button>
                     <button
+                        disabled={this.props.disable}
+                        style={this.isClickable()}
                         onClick={this.props.onClearPath}
                         className='btn btn-outline-danger btn-lg m-2'>Clear Path</button>
                     <button
+                        disabled={this.props.disable}
+                        style={this.isClickable()}
                         onClick={this.props.onClearBoard}
                         className='btn btn-outline-danger btn-lg m-2'>Clear Board</button>
-                        <button
+                    <button
                         className="btn btn-warning m-2"
                         onClick={this.showModal}
-                        disabled={this.props.isDisabled}
                     >
                         Instructions
                     </button>
@@ -65,6 +72,13 @@ class Menu extends Component {
                 </nav>
             </React.Fragment>
         );
+    }
+    isClickable = () =>{
+        if( this.props.disable ){
+            return {cursor: "not-allowed"};
+        } else{
+            return {};
+        }
     }
 }
 

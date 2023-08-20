@@ -30,7 +30,17 @@ class Menu extends Component {
                     </Instruct>
                 </div>
                 <nav className="nav alert-light pl-2 pt-2 mb-2">
-                    <button className="btn btn-success btn-lg m-2" onClick={this.props.onRefresh} disabled={this.props.isDisabled} style={this.isClickable()}>Refresh</button>
+                    <button className="btn btn-success btn-lg m-2" onClick={this.props.onRefresh} disable={this.props.disable} style={this.isClickable()}>Refresh</button>
+                    <DiscreteSlider
+                        onChange={this.props.onChangeValues}
+                        title="Total Numbers"
+                        marks={false}
+                        default={50}
+                        step={1}
+                        min={10}
+                        max={200}
+                        disable={this.props.disable}
+                    />
                     <DiscreteSlider
                         onChange={this.props.onChangeSpeed}
                         title="Speed"
@@ -39,22 +49,12 @@ class Menu extends Component {
                         step={1}
                         min={10}
                         max={50}
-                        isDisabled={false}
-                    />
-                    <DiscreteSlider
-                        onChange={this.props.onChangeValues}
-                        title="Total Number"
-                        marks={false}
-                        default={50}
-                        step={1}
-                        min={10}
-                        max={200}
-                        isDisabled={this.props.isDisabled}
+                        disable={false}
                     />
                     <button
                         className="btn btn-primary btn-lg m-2"
                         onClick={this.props.onVisualize}
-                        disabled={this.props.isDisabled}
+                        disabled={this.props.disable}
                         style={this.isClickable()}
                     >
                         Visualize Graham Scan
@@ -62,8 +62,6 @@ class Menu extends Component {
                     <button
                         className="btn btn-warning m-2"
                         onClick={this.showModal}
-                        disabled={this.props.isDisabled}
-                        style={this.isClickable()}
                     >
                         Instructions
                     </button>
@@ -73,7 +71,7 @@ class Menu extends Component {
         );
     }
     isClickable = () =>{
-        if( this.props.isDisabled ){
+        if( this.props.disable ){
             return {cursor: "not-allowed"};
         } else{
             return {};

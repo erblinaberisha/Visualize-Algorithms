@@ -25,9 +25,6 @@ export default function DiscreteSlider(props) {
     }
     return (
         <div className={classes.root+" ml-2 mr-2"}>
-            <Typography id="discrete-slider" gutterBottom>
-                {props.title}
-            </Typography>
             <Slider
                 defaultValue={props.default}
                 getAriaValueText={valuetext}
@@ -41,6 +38,9 @@ export default function DiscreteSlider(props) {
                 valueLabelDisplay="on"
                 disabled={props.isDisabled}
             />
+            <Typography id="discrete-slider" gutterBottom>
+                {props.title}
+            </Typography>
         </div>
     );
 }

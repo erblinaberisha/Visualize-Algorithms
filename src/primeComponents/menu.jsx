@@ -38,6 +38,16 @@ class Menu extends Component {
                         onAlgoChanged={this.props.setAlgo}
                     />
                     <DiscreteSlider
+                        onChange={this.props.onChangeValues}
+                        title="Numbers"
+                        marks={false}
+                        default={100}
+                        step={1}
+                        min={10}
+                        max={500}
+                        isDisabled={this.props.isDisabled}
+                    />
+                    <DiscreteSlider
                         onChange={this.props.onChangeSpeed}
                         title="Speed"
                         marks={false}
@@ -46,16 +56,6 @@ class Menu extends Component {
                         min={10}
                         max={50}
                         isDisabled={false}
-                    />
-                    <DiscreteSlider
-                        onChange={this.props.onChangeValues}
-                        title="Total Number"
-                        marks={false}
-                        default={100}
-                        step={1}
-                        min={10}
-                        max={500}
-                        isDisabled={this.props.isDisabled}
                     />
                     <button className="btn btn-primary btn-lg m-2" 
                         onClick={this.props.onVisualize} 

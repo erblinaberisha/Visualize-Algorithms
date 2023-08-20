@@ -63,7 +63,7 @@ export default function RangeSlider(props) {
                 max={props.max}
             />
             <Typography id="range-slider" gutterBottom>
-                <span class="badge badge-warning">Binary Search</span>
+                <span>Binary Search</span>
             </Typography>
         </div>
     );

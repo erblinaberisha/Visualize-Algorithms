@@ -3,6 +3,7 @@ import ImgMediaCard2 from "./card2";
 import "./style.css";
 import {getDetails} from "./cardDetails";
 import TextField from "@material-ui/core/TextField";
+import { colors } from '@material-ui/core';
 class Cards extends Component {
 
     state = {
@@ -22,8 +23,7 @@ class Cards extends Component {
            <React.Fragment>
                <div className="d-flex justify-content-end Cards">
                    <TextField
-                       id="standard-basic" label="Search"
-                       color="blue"
+                       id="filled-basic" label="Search"
                        onChange={this.getData}
                    />
                </div>
@@ -38,7 +38,6 @@ class Cards extends Component {
                            </div>
                        ))
                    }
-
                </div>
            </React.Fragment>
         );

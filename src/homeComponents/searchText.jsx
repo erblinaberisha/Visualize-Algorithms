@@ -17,7 +17,7 @@ export default function BasicTextFields() {
 
     return (
         <form className={classes.root} noValidate autoComplete="off">
-            <TextField id="standard-basic" label="Search" />
+            <TextField id="standard-basic" label="Search" style={{color:"red"}}/>
         </form>
     );
 }

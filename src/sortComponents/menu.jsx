@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import DiscreteSlider from "./slider";
 import SimpleSelect from "./simpleSelect";
+import SimpleSelectII from "./simpleSelectII";
 import SwitchLabels from "./formControlLabel";
 import Instruct from "../instructions/Instruct";
 import instruct_gif from "../sortComponents/instruct.gif";
@@ -68,7 +69,7 @@ class Menu extends Component {
                         disable={this.props.disable}
                         onDoubleChange={this.props.onDoubleChange}
                     />
-                    <SimpleSelect
+                    <SimpleSelectII
                         pos={1}
                         onAlgoChanged={this.props.onAlgoChanged}
                     />
@@ -83,7 +84,6 @@ class Menu extends Component {
                     <button
                         className="btn btn-warning m-2"
                         onClick={this.showModal}
-                        disabled={this.props.disable}
                     >
                         Instructions
                     </button>
