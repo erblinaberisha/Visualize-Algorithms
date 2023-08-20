@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: ASAP SEMIBOLD;
-    src: url(./images/Asap-SemiBold.ttf);
+  font-family: LibreFranklin-Light;
+  src: url(./LibreFranklin-Light.ttf);
 }
 
 .type{
@@ -30,6 +30,7 @@
 
 .footer-copyright{
     color:white;
+    font-family: LibreFranklin-Light;
 }
 .greet{
     text-align: center;
@@ -92,7 +93,7 @@
 .main-title{
     font-size: 3rem;
     color: white;
-    padding-top: 18vh;
+    padding-top: 75px;
     font-family: Anurati, sans-serif;
     letter-spacing: 5px;
     text-align: center;
@@ -108,10 +109,10 @@
 .description-title{
     color: white;
     font-weight:500;
-    width: 50%;
-    margin: auto;
+    width: 70%;
     text-align: center;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin: auto;
+    font-family: LibreFranklin-Light;
 }
 
 td {
@@ -326,7 +327,7 @@ table{
   margin-left: 400px;
   margin-top: 30px;
   margin-bottom: -3px;
-  font-size: 17px;
+  font-size: 15px;
   font-family: monospace;
   color: white;
   text-align: center;
@@ -365,10 +366,6 @@ table{
 .welcome{
   margin-top: 0;
   color:#000000;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 2.7rem;
-  font-weight: 300;
-  line-height: 1.2;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;

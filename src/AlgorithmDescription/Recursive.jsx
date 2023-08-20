@@ -18,25 +18,28 @@ function MyComponent() {
                     <div className="modal display-block">
                           <div class="modal-main1 intro">
                             <div class="modal-header">
-                                  <h5 class="modal-title">Pathfinder</h5>
+                                  <h5 class="modal-title">Recursive Sorting</h5>
                                   <button type="button" class="close" onClick={hideModal}>&times;</button>
                               </div>
                             <div class="modal-body intro">
                               <p>
-                                  Pathfinding is generally the process of finding a route between two points. It is closely related to the shortest path problem in graph theory,
-                                  which examines how to identify the "best" paths valued by different criteria (Ex. distance, cost, time consumption).
+                                Recursion is when a function calls itself within its code, thus repeatedly executing the instructions present inside it. 
+                                It is mainly used when the solution to a bigger problem can be expressed in terms of smaller problems.
                               </p>
                               <p>
-                                    In our scenario, the paths are valued by the number of cells they passed from START:
-                                    <div class="simg" width="20" height="20"></div>
-                                    to the TARGET:
-                                    <div class="fimg" width="20" height="20"></div>
-                                    .
+                                This module includes:
+                                <pre>
+                                  <br></br>
+                                    <ul>
+                                        <li>Merge Sort   T O(nlogn) - S O(n)</li>
+                                        <li>Heap Sort    T O(nlogn) - S O(1)</li>
+                                        <li>Quick Sort   T O(n^2) - S O(log(n))</li>
+                                    </ul>
+                                </pre>
                               </p>
-                              <p>You may click on the blank nodes to add random Walls. Or this can be made automatically by choosing a Maze Algorithm and then clicking Create Maze button.</p>
-                              <p>Now please choose a Path Algorithm and visualize it!</p>
-                                <p class='tips'>(after choosing a Path Algorithm, click on the Visualize button.)</p><br />
-                                <p class='tips'>Note: if you want to remove Walls and generated Path you can do so by clicking in Clear Path and Clear Board buttons.</p>
+                              <p>Now please choose a sorting algorithm and visualize it!</p>
+                                <p class='tips'>(after choosing an algorithm, click on the Visualize button.)</p><br />
+                                <p class='tips'>Note: if you want to get a different array to sort you can do so by clicking the Randomize button.</p>
                             </div>
                             <div class="modal-footer">
                               <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={hideModal}>OK</button>
