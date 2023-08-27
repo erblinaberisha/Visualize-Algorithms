@@ -174,7 +174,7 @@ class Pathfinder extends Component {
                     document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-visited';
                     
                     document.getElementById(`node-${4}-${4}`).className = 'node node-start';
-                    document.getElementById(`node-${14}-${47}`).className = 'node node-end';
+                    document.getElementById(`node-${14}-${49}`).className = 'node node-end';
                 }else{
                     window.location.reload();
                     window.location.pathname("/");
@@ -200,7 +200,7 @@ class Pathfinder extends Component {
                     'node node-shortest-path';
 
                     document.getElementById(`node-${4}-${4}`).className = 'node node-start';
-                    document.getElementById(`node-${14}-${47}`).className = 'node node-end';
+                    document.getElementById(`node-${14}-${49}`).className = 'node node-end';
                 }else{
                     window.location.reload();
                     window.location.pathname("/");

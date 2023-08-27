@@ -8,29 +8,29 @@ export function getDetails(){
    return [
        {
            id:1,
-           title:"Pathfinding",
-           description:"Visualize graph algorithms like dijkstra, BFS, DFS",
+           title:"Pathfinder",
+           description:"Visualize graph algorithms like Dijkstra, A*, BFS, DFS",
            route:"/pathfinder",
            img:graph
        },
        {
            id:2,
-           title:"Sorting Algorithms",
-           description:"Compare different sorting algorithms",
+           title:"Iterative Sorting",
+           description:"Compare different Iterative sorting algorithms",
            route:"/sort",
            img:sort
        },
        {
            id:3,
            title:"Recursive Sorting",
-           description:"Compare different recursive sorting algorithms",
+           description:"Compare different Recursive sorting algorithms",
            route:"/recursivesort",
            img:sort1
        },
        {
            id:4,
            title:"Prime Numbers",
-           description:"Visualize how Seive is better than brute force",
+           description:"Visualize Seive algorithm and the Archimedes Spiral pattern",
            route:"/prime",
            img:primes
        },

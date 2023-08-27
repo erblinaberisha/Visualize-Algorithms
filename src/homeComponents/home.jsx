@@ -161,17 +161,16 @@ class Home extends Component {
                     <TextLoop interval={3800} springConfig={{ stiffness: 200 }} adjustingSpeed={300} >
                         <p className="quoteText">"An algorithm must be seen to be believed."</p>
                         <p className="quoteText">"Algorithms are central objects of study in Computer Science."</p>
-                        <p className="quoteText">"Algorithms are apprehensible magics."</p>
+                        <p className="quoteText">"Algorithm without humanity is digital barbarism."</p>
+                        <p className="quoteText">"Algorithms are mathematics too, and often more interesting and more useful."</p>
                         <p className="quoteText">"An algorithm is like a recipe."</p>
                     </TextLoop>
                   </p>
                 </div>
-                <div>
-                    <p className="description-title center">
-                    Algorithm Visualizer is an interactive online platform that visualizes algorithms from code.
-                    Currently these include Sorting, Pathfind and ConvexHull Algorithms.
-                    More Algorithms will be coming soon!!
-                    This website might help you understand algorithms better by visualizing them.
+                <div style={{fontSize: "19px"}}>
+                    <p className="description-title">
+                    Algorithm Visualizer is a learning platform that might help you understand algorithms better by visualizing them.
+                    Currently these include Pathfinding, Sorting, Recursive Sorting, Prime Numbers, ConvexHull and Binary Search Algorithms.
                     </p>
                 </div>
                     <Cards/>

@@ -21,20 +21,25 @@ function MyComponent() {
                     <div className="modal display-block">
                           <div class="modal-main1 intro">
                             <div class="modal-header">
-                                  <h5 class="modal-title">Sorting</h5>
+                                  <h5 class="modal-title">Iterative Sorting</h5>
                                   <button type="button" class="close" onClick={hideModal}>&times;</button>
                               </div>
                             <div class="modal-body intro">
                               <p>
                                 Sorting is a process of arranging an ordered sequence. It is a common operation in many applications.
+                                Iteration is when a loop repeatedly executes the set of instructions like "for" loops and "while" loops.
                               </p>
                               <p>
-                                Common uses of sorted sequences are:
+                                This module includes:
+                                <pre>
+                                  <br></br>
                                     <ul>
-                                        <li>lookup or search efficiently</li>
-                                        <li>merge sequences efficiently</li>
-                                        <li>process data in a defined order</li>
+                                        <li>Bubble Sort       T O(n^2) - S O(1)</li>
+                                        <li>Selection Sort    T O(n^2) - S O(1)</li>
+                                        <li>Insertion Sort    T O(n^2) - S O(1)</li>
+                                        <li>Quick Sort        T O(n^2) - S O(log(n))</li>
                                     </ul>
+                                </pre>
                               </p>
                               <p>Now please choose a sorting algorithm and visualize it! You can click the Duo switch to compare two different sorting algorithms.</p>
                                 <p class='tips'>(after choosing an algorithm, click on the Visualize button.)</p><br />
