@@ -1,39 +1,3 @@
-export function bubbleSort2(rects ){
-    const pairs = [];
-    const num  = rects.length;
-    const prevRect = rects.slice();
-
-    for( let i = 0; i<num; i++ ){
-        for( let j = i+1;j<num;j++ ){
-            if( prevRect[i].width>prevRect[j].width ){
-                const recti = {...prevRect[i]};
-                const rectj = {...prevRect[j]};
-                prevRect[j] = recti;
-                prevRect[i] = rectj;
-                pairs.push( {
-                    xx:i,
-                    yy:j,
-                    changed:true
-                } );
-            } else{
-                pairs.push( {
-                    xx:i,
-                    yy:j,
-                    changed:false
-                });
-            }
-            if( j === num-1 ){
-                pairs.push( {
-                    xx:i,
-                    yy:i,
-                    changed:false
-                });
-            }
-        }
-    }
-    return pairs;
-}
-
 export function selectionSort(arr) {
     const pairs = [];
     let n = arr.length;
