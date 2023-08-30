@@ -20,7 +20,7 @@ class App extends Component {
 
     render() {
         return (
-            <Router basename='/'>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path='/pathfinder'  component={Pathfinder}/>
                     <Route path='/prime' component={Seive}/>
