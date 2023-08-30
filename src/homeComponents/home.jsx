@@ -5,7 +5,7 @@ import Footer from "./footer";
 import "./style.css";
 import {ReactComponent as Github} from "./images/github.svg";
 import {ReactComponent as LinkedIn} from "./images/linkedin.svg";
-import {ReactComponent as LogoIcon} from "./images/analytics.svg";
+import {ReactComponent as LogoIcon} from "./images/logo.svg";
 
 class Home extends Component {
     componentDidMount(){
@@ -152,7 +152,7 @@ class Home extends Component {
                     
                 <h1 className="main-title center">
                   <div className="logo">
-                  <LogoIcon/>
+                    <LogoIcon/>
                   </div>
                   ALGORITHM <strong style={{color:"#4175c4"}}><br></br>VISUALIZER</strong>
                 </h1>
