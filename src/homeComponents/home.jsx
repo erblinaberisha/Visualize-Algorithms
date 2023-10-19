@@ -170,7 +170,7 @@ class Home extends Component {
                 <div style={{fontSize: "19px"}}>
                     <p className="description-title">
                     Algorithm Visualizer is a learning platform that might help you understand algorithms better by visualizing them.
-                    Currently these include Pathfinding, Sorting, Recursive Sorting, Prime Numbers, ConvexHull and Binary Search Algorithms.
+                    Currently these include Pathfinding, Iterative Sorting, Recursive Sorting, Prime Numbers, Convex Hull (Graham Scan) and Binary Search Algorithm.
                     </p>
                 </div>
                     <Cards/>
