@@ -89,7 +89,7 @@ const Canvas2 = (props) => {
 
     return(
         <div>
-            <canvas ref={canvasDots} width={canvasDimW} height={canvasDimH} style={{backgroundColor:"grey"}}/>
+            <canvas ref={canvasDots} width={canvasDimW} height={canvasDimH} style={{backgroundColor:"gray"}}/>
         </div>
 
     );

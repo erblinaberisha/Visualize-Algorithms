@@ -3,6 +3,11 @@ import TextField from '@material-ui/core/TextField';
 import Swal from 'sweetalert2';
 
 class EntryPoint extends Component {
+    constructor() {
+        super();
+        this.buttonRef = React.createRef();
+    }
+
     state={
         error:false
     }
@@ -10,23 +15,25 @@ class EntryPoint extends Component {
         return (
             <div>
                 <h6>
-                    Please choose a number that represents the interval where the search is going to take place (Default is 100):
+                    Please choose the upper limit for the search range (Default is 100):
                 </h6><br />
                 <TextField
+                    autoFocus
                     error={this.state.error}
                     id="standard-error-helper-text"
                     label="Upper Number"
                     type="number"
                     variant="outlined"
                     onChange={this.getData}
-                    onBlur={this.handleBlur}
+                    onKeyDown={this.handleKeyDown}
                     placeholder='Eg. 100'
                 /> <br /><br />
-                <h2>
-                    Guess a number to be searched between 0 and {this.props.upper}
-                </h2>
+                <h3>
+                    Guess a number to search between 0 and {this.props.upper}!
+                </h3>
                 <br />
                 <button
+                    ref={this.buttonRef}
                     className='btn btn-primary btn-lg'
                     onClick={this.props.startGame}
                 >
@@ -36,12 +43,19 @@ class EntryPoint extends Component {
         );
     }
     getData = (e)=>{
+        this.handleBlur(e);
         if( e.target.value!== "" && e.target.value >0){
             console.log(e.target.value);
             this.props.setUpper(e.target.value);
         }
         else{
             this.props.setUpper(100);
+        }
+    }
+
+    handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            this.buttonRef.current.click();
         }
     }
 
@@ -58,7 +72,7 @@ class EntryPoint extends Component {
         }else if(e.target.value != "" && num !== Math.floor(num)){
             Swal.fire({
                 title: 'Warning!',
-                text: 'Please enter a valid value. The two nearest valid values are '+Math.floor(num)+' and '+ (Math.floor(num)+1)+'.',
+                text: 'Please enter a valid value. The number should be an integer.',
                 icon: 'warning',
                 confirmButtonText: 'OK'
               });
@@ -66,5 +80,5 @@ class EntryPoint extends Component {
         }
     }
 }
-
+//'Please enter a valid value. The two nearest valid values are '+Math.floor(num)+' and '+ (Math.floor(num)+1)+'.'
 export default EntryPoint;

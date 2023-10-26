@@ -103,7 +103,11 @@ class Canvas extends Component {
                 ctx2.closePath();
 
                 ctx2.beginPath();
-                ctx2.fillStyle = 'red';
+                if(i == lines.length - 1){
+                    ctx2.fillStyle = 'green';
+                }else{
+                    ctx2.fillStyle = 'red';
+                }
                 ctx2.moveTo(lines[i].to.xx, lines[i].to.yy)
                 ctx2.arc(lines[i].to.xx, lines[i].to.yy, 14, 0, 2*Math.PI);
                 ctx2.fill();

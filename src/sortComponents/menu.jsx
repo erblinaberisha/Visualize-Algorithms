@@ -28,9 +28,10 @@ class Menu extends Component {
             <React.Fragment>
                 <div className='text-center'>
                     <Instruct show={this.state.showModal}>
-                        <h3>How to use?</h3>
+                    <h5>Please refer to the following video to learn how to use the app:</h5>
                         <img className="card-img-top img-thumbnail" style={{marginBottom:"5px"}} src={instruct_gif} alt="Card image cap"/>
-                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit" onClick={this.hideModal}>Close</button>
+                        <h6 style={{display: 'inline', marginLeft: 0, float: 'left', marginTop: 12, color: "#505050", fontSize: "13px"}}>Click the button Close to visualize algorithms on your own.</h6>
+                        <button className="btn btn-primary my-sm-0" style={{float: 'right'}} type="submit" onClick={this.hideModal}>Close</button>
                     </Instruct>
                 </div>
                 <nav className="nav alert-light pl-2 pt-2 mb-2">
