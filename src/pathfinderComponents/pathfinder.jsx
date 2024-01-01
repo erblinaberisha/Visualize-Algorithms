@@ -173,8 +173,8 @@ class Pathfinder extends Component {
 
                     document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-visited';
                     
-                    document.getElementById(`node-${4}-${4}`).className = 'node node-start';
-                    document.getElementById(`node-${14}-${49}`).className = 'node node-end';
+                    document.getElementById(`node-${this.state.startNode.row}-${this.state.startNode.col}`).className = 'node node-start';
+                    document.getElementById(`node-${this.state.endNode.row}-${this.state.endNode.col}`).className = 'node node-end';
                 }else{
                     window.location.reload();
                     window.location.pathname("/");
@@ -199,8 +199,8 @@ class Pathfinder extends Component {
                     document.getElementById(`node-${node.row}-${node.col}`).className =
                     'node node-shortest-path';
 
-                    document.getElementById(`node-${4}-${4}`).className = 'node node-start';
-                    document.getElementById(`node-${14}-${49}`).className = 'node node-end';
+                    document.getElementById(`node-${this.state.startNode.row}-${this.state.startNode.col}`).className = 'node node-start';
+                    document.getElementById(`node-${this.state.endNode.row}-${this.state.endNode.col}`).className = 'node node-end';
                 }else{
                     window.location.reload();
                     window.location.pathname("/");
