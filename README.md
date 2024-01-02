@@ -2,51 +2,63 @@
 
 <h1>Visualize Algorithms</h1>
 
-A better visualization of different algorithms made with React.
-
-Pathfinder
-Iterative Sorting
-Recursive Sorting
-Prime Numbers
-Convex Hull
-Binary Search
-
-I have implemented a total of 17 algorithms so far.
-
+A better visualization of different algorithms made with ReactJS.
+<ul>
+<li>Pathfinder</li>
+<li>Iterative Sorting</li>
+<li>Recursive Sorting</li>
+<li>Prime Numbers</li>
+<li>Convex Hull</li>
+<li>Binary Search</li>
+</ul>
+<p>I have implemented a total of <code>17 algorithms</code> so far.</p>
 Algorithms implemented:
+<br><br>
+<ul>
+<li>DFS</li>
 
-DFS
+<li>BFS</li>
 
-BFS
+<li>Dijkstra</li>
 
-Dijkstra
+<li>A star</li>
 
-A star
+<li>Recursive Maze Creation</li>
 
-Recursive Maze Creation
+<li>Random Maze Creation</li>
 
-Random Maze Creation
+<li>Bubble sort</li>
 
-Bubble sort
+<li>Selection sort</li>
 
-Selection sort
+<li>Insertion sort</li>
 
-Insertion sort
+<li>Quick sort</li>
 
-Heap sort
+<li>Heap sort</li>
 
-Merge sort
+<li>Merge sort</li>
 
-Quick sort
+<li>Recursive quick sort</li>
 
-Sieve of Eratosthenes
+<li>Sieve of Eratosthenes</li>
 
-Archimedes Spiral
+<li>Archimedes Spiral</li>
 
-Graham Scan for Convex Hull
+<li>Graham Scan for Convex Hull</li>
 
-Binary Search
+<li>Binary Search</li>
+</ul>
 
-Recursion
+### Execution
 
-If you like this please star this repo. It keeps me motivated.
+In order for web-application to execute you have to install Node.js (LTS version) and than execute this command to start it.
+<pre>npm install 
+npm start</pre>
+
+### Conclusion
+
+Thank you for exploring my project! We hope you find it valuable and useful. 🚀
+
+If you find this project helpful or interesting, please consider starring this repository. It keeps me motivated! ⭐️
+
